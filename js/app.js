@@ -1,18 +1,17 @@
 const pesoIngresado = document.getElementById('peso-ingresado');
-const res_Mercurio = document.querySelector('.resultadoMercurio');
-const res_Venus = document.querySelector('.resultadoVenus');
-const res_Tierra = document.querySelector('.resultadoTierra');
-const res_Marte = document.querySelector('.resultadoMarte');
-const res_Jupiter = document.querySelector('.resultadoJupiter');
-const res_Saturno = document.querySelector('.resultadoSaturno');
-const res_Urano = document.querySelector('.resultadoUrano');
-const res_Neptuno = document.querySelector('.resultadoNeptuno');
-const res_Pluton = document.querySelector('.resultadoPluton');
-const res_Sol = document.querySelector('.resultadoSol');
-const res_Luna = document.querySelector('.resultadoLuna');
-const resultados = [res_Mercurio, res_Venus, res_Tierra, res_Marte, res_Jupiter, res_Saturno, res_Urano, res_Neptuno, res_Pluton, res_Sol, res_Luna];
+const spans = document.querySelectorAll('.resultado-planeta span');
+
+const resultados = Array.from(spans);
+const alerta = document.querySelector('.alerta');
 
 pesoIngresado.addEventListener('keyup', () => {
+    if (pesoIngresado.value > 1000) {
+        alerta.style.display = "block";
+        pesoIngresado.value = '';
+        setTimeout(() => {
+            alerta.style.display = "none";
+        }, 2000);
+    }
     const g_Mercurio = 3.7,
         g_Venus = 8.87,
         g_Tierra = 9.807,
