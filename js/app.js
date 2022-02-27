@@ -5,12 +5,12 @@ const resultados = Array.from(spans);
 const alerta = document.querySelector('.alerta');
 
 pesoIngresado.addEventListener('keyup', () => {
-    if (pesoIngresado.value > 1000) {
-        alerta.style.display = "block";
+    if (pesoIngresado.value > 1000 || pesoIngresado.value < 0) {
+        alerta.style.display = 'block';
         pesoIngresado.value = '';
         setTimeout(() => {
-            alerta.style.display = "none";
-        }, 2000);
+            alerta.style.display = 'none';
+        }, 3000);
     }
     const g_Mercurio = 3.7,
         g_Venus = 8.87,
@@ -24,7 +24,19 @@ pesoIngresado.addEventListener('keyup', () => {
         g_Sol = 274,
         g_Luna = 1.62;
 
-    const gravedad = [g_Mercurio, g_Venus, g_Tierra, g_Marte, g_Jupiter, g_Saturno, g_Urano, g_Neptuno, g_Pluton, g_Sol, g_Luna];
+    const gravedad = [
+        g_Mercurio,
+        g_Venus,
+        g_Tierra,
+        g_Marte,
+        g_Jupiter,
+        g_Saturno,
+        g_Urano,
+        g_Neptuno,
+        g_Pluton,
+        g_Sol,
+        g_Luna,
+    ];
 
     for (let i = 0; i < gravedad.length; i++) {
         calculo = (pesoIngresado.value * gravedad[i]) / g_Tierra;

@@ -1,185 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calcular peso en otros planetas</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular peso en otros planetas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@300;400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>Calcula tu peso en otros planetas</h1>
+            </div>
 
-<body>
-    <div class="container">
-        <div class="title">
-            <h1>Calcula tu peso en otros planetas</h1>
+            <div class="input">
+                <input type="number" min="0" max="1000" placeholder="Ingresa tu peso" id="peso-ingresado" />
+            </div>
+
+            <main class="planetas">
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/01 - mercurio.png" alt="mercurio" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Mercurio</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoMercurio">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/02 - venus.png" alt="venus" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Venus</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoVenus">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/03 - tierra.png" alt="tierra" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Tierra</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoTierra">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/04 - marte.png" alt="marte" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Marte</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoMarte">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/05 - jupiter.png" alt="jupiter" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Júpiter</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoJupiter">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/06 - saturno.png" alt="saturno" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Saturno</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoSaturno">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/07 - urano.png" alt="urano" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Urano</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoUrano">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/08 - neptuno.png" alt="neptuno" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Neptuno</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoNeptuno">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/pluton.png" alt="pluton" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Plutón</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoPluton">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/sol.png" alt="sol" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Sol</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoSol">0</span>kg.</div>
+                </div>
+
+                <div class="box-planeta">
+                    <div class="img-planeta">
+                        <img src="images/luna.png" alt="luna" />
+                    </div>
+                    <div class="nombre-planeta">
+                        <span>Luna</span>
+                    </div>
+                    <div class="resultado-planeta"><span class="resultadoLuna">0</span>kg.</div>
+                </div>
+            </main>
+        </div>
+        <!-- <div class="footer">
+            <a href="https://twitter.com/Noctusm85" target="_blank"><i class="fab fa-twitter"></i>@Noctusm85</a>
+        </div> -->
+        <div class="alerta">
+            <span>Ingresa un peso entre 0 y 1000kg máximo.</span>
         </div>
 
-        <div class="input">
-            <input type="number" min="0" max="1000" placeholder="Ingresa tu peso" id="peso-ingresado">
-        </div>
-
-        <div class="planetas">
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/01 - mercurio.png" alt="mercurio">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Mercurio</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoMercurio">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/02 - venus.png" alt="venus">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Venus</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoVenus">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/03 - tierra.png" alt="tierra">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Tierra</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoTierra">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/04 - marte.png" alt="marte">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Marte</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoMarte">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/05 - jupiter.png" alt="jupiter">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Júpiter</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoJupiter">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/06 - saturno.png" alt="saturno">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Saturno</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoSaturno">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/07 - urano.png" alt="urano">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Urano</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoUrano">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/08 - neptuno.png" alt="neptuno">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Neptuno</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoNeptuno">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/pluton.png" alt="pluton">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Plutón</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoPluton">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/sol.png" alt="sol">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Sol</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoSol">0</span>kg.
-                </div>
-            </div>
-
-
-            <div class="box-planeta">
-                <div class="img-planeta">
-                    <img src="images/luna.png" alt="luna">
-                </div>
-                <div class="nombre-planeta">
-                    <span>Luna</span>
-                </div>
-                <div class="resultado-planeta">
-                    <span class="resultadoLuna">0</span>kg.
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="footer">
-        <a href="https://twitter.com/Noctusm85" target="_blank"><i class="fab fa-twitter"></i>@Noctusm85</a>
-    </div>
-
-    <div class="alerta">
-        <i class="fas fa-exclamation-triangle"></i>
-        <span>Número máximo 1000</span>
-        <i class="fas fa-exclamation-triangle"></i>
-    </div>
-
-    <script src="js/app.js"></script>
-</body>
-
+        <script src="js/app.js"></script>
+    </body>
 </html>
